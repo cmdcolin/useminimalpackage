@@ -4,8 +4,17 @@ import { baz } from '@cmdcolin/minimalpackage2'
 function App() {
   return (
     <>
-      this package, which import @cmdcolin/minimalpackage {foo()}
-      from other package @cmdcolin/minimalpackage2 which uses v8: {baz()}
+      <div>
+        this app imports @cmdcolin/minimalpackage@v11, here is it's output:{' '}
+        {foo()}
+      </div>
+      <div>
+        this app also imports @cmdcolin/minimalpackage2, which in turn uses
+        @cmdcolin/minimalpackage@v10, here is it's output: {baz()}
+      </div>
+      <div>
+        <a href="https://github.com/cmdcolin/useminimalpackage">Github</a>
+      </div>
     </>
   )
 }
